@@ -1,4 +1,7 @@
-# windows-setup
+# 전각반각 삭제 및 윈도우 우클릭 풀메뉴 설정
+
+> 저장소 이름: `win11-fullwidth-fullmenu-setup`
+> (GitHub 저장소 이름은 영문·숫자·`-`·`_`·`.`만 허용해 한글을 쓸 수 없습니다. 한글 제목은 이 문서와 저장소 설명에 둡니다.)
 
 포맷 후 다시 잡아야 하는 Windows 11 개인 설정을, **깃허브 접근만으로 골라서 적용**하는 스크립트.
 
@@ -12,7 +15,7 @@ git 설치도, 클론도, 관리자 권한도 필요 없습니다.
 PowerShell을 열고:
 
 ```powershell
-irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1 | iex
+irm https://raw.githubusercontent.com/pyu4277/win11-fullwidth-fullmenu-setup/main/setup.ps1 | iex
 ```
 
 메뉴가 뜨고 번호로 원하는 항목만 고르면 됩니다 (`1,2` / `a` 전체 / `q` 취소).
@@ -21,13 +24,13 @@ irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1 | iex
 
 ```powershell
 # 전부 적용
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1))) -All
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/win11-fullwidth-fullmenu-setup/main/setup.ps1))) -All
 
 # 특정 항목만
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1))) -Only classic-context-menu
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/win11-fullwidth-fullmenu-setup/main/setup.ps1))) -Only classic-context-menu
 
 # 현재 상태만 확인
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1))) -List
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/win11-fullwidth-fullmenu-setup/main/setup.ps1))) -List
 ```
 
 ### 2. 저장소가 비공개일 때
@@ -35,13 +38,13 @@ irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1 | iex
 `raw.githubusercontent.com`은 비공개 저장소에 인증 없이 접근할 수 없습니다. 두 가지 방법:
 
 - **GitHub 웹에서 Code → Download ZIP** → 압축 풀고 `.\setup.ps1` 실행
-- **gh CLI 사용**: `gh repo clone pyu4277/windows-setup` 후 `.\setup.ps1` 실행
+- **gh CLI 사용**: `gh repo clone pyu4277/win11-fullwidth-fullmenu-setup` 후 `.\setup.ps1` 실행
 
 한 줄 실행이 편하면 저장소 설정에서 공개로 바꾸면 됩니다. 이 저장소에는
 비밀값이나 개인정보가 없고 일반적인 Windows 설정 스크립트뿐입니다.
 
 ```powershell
-gh repo edit pyu4277/windows-setup --visibility public --accept-visibility-change-consequences
+gh repo edit pyu4277/win11-fullwidth-fullmenu-setup --visibility public --accept-visibility-change-consequences
 ```
 
 ### 실행 정책 때문에 막히면

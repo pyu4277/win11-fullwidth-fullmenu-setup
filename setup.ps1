@@ -26,10 +26,10 @@
     Undo instead of apply.
 
 .EXAMPLE
-    irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1 | iex
+    irm https://raw.githubusercontent.com/pyu4277/win11-fullwidth-fullmenu-setup/main/setup.ps1 | iex
 
 .EXAMPLE
-    & ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/windows-setup/main/setup.ps1))) -All
+    & ([scriptblock]::Create((irm https://raw.githubusercontent.com/pyu4277/win11-fullwidth-fullmenu-setup/main/setup.ps1))) -All
 
 .EXAMPLE
     .\setup.ps1 -Only classic-context-menu
